@@ -1,4 +1,4 @@
-package dos
+package su
 
 import (
 	"fmt"
@@ -26,6 +26,7 @@ type _ShellExecuteInfo struct {
 	hProcess      windows.Handle
 }
 
+var kernel32 = windows.NewLazySystemDLL("kernel32.dll")
 var shell32 = windows.NewLazySystemDLL("shell32.dll")
 var procShellExecute = shell32.NewProc("ShellExecuteExW")
 var procGetProcessId = kernel32.NewProc("GetProcessId")
