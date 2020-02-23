@@ -1,7 +1,6 @@
 package main
 
 import (
-	"flag"
 	"fmt"
 	"os"
 	"strings"
@@ -27,7 +26,11 @@ func mains(args []string) error {
 
 	buffer.WriteString("copy ")
 	for _, s := range args {
-		fmt.Fprintf(&buffer, `"%s" `, s)
+		if s[0] == '/' {
+			fmt.Fprintf(&buffer, `%s `, s)
+		} else {
+			fmt.Fprintf(&buffer, `"%s" `, s)
+		}
 	}
 	buffer.WriteString(`& pause"`)
 
@@ -39,8 +42,7 @@ func mains(args []string) error {
 }
 
 func main() {
-	flag.Parse()
-	if err := mains(flag.Args()); err != nil {
+	if err := mains(os.Args[1:]); err != nil {
 		fmt.Fprintln(os.Stderr, err.Error())
 		os.Exit(1)
 	}
