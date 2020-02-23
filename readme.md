@@ -49,3 +49,15 @@ func main() {
     }
 }
 ```
+
+Sample Application
+------------------
+
+[source](./cmd/sucopy/main.go)
+
+```
+sucopy SRC DST
+```
+
+Execute `copy` built in CMD.EXE in Administrator-mode.
+`sucopy` keeps network-drives.
