@@ -13,15 +13,15 @@ func mains(args []string) error {
 	var buffer strings.Builder
 	buffer.WriteString(`/s /c "`)
 
-	if dir, err := os.Getwd(); err == nil {
-		fmt.Fprintf(&buffer, `cd "%s" & `, dir)
-	}
-
 	if netDrives, err := netresource.GetNetDrives(); err == nil {
 		for _, n := range netDrives {
 			fmt.Fprintf(&buffer, `net use %c: "%s" 2>nul & `,
 				n.Letter, n.Remote)
 		}
+	}
+
+	if dir, err := os.Getwd(); err == nil {
+		fmt.Fprintf(&buffer, `cd /D "%s" & `, dir)
 	}
 
 	buffer.WriteString("copy ")
