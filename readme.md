@@ -3,8 +3,8 @@ go-windows-su
 
 Switch or test administrator's mode
 
-Switch
-------
+[Switch](./cmd/chhosts/main.go)
+------------------------------
 
 ```go
 package main
@@ -27,29 +27,30 @@ func main() {
 }
 ```
 
-Test
-----
+[Test](./cmd/isElevated/main.go)
+--------------------------------
 
 ```go
-
-// +build run
-
 package main
 
 import (
+    "fmt"
+    "os"
+
     "github.com/zetamatta/go-windows-su"
 )
 
 func main() {
     flag, err := su.IsElevated()
     if err != nil {
-        println(err.Error())
-        return
-    }
-    if flag {
-        println("Administrator mode")
+        fmt.Fprintln(os.Stderr, err.Error())
+        os.Exit(2)
+    } else if flag {
+        fmt.Println("Administrator mode")
+        os.Exit(0)
     } else {
-        println("Not administrator mode")
+        fmt.Println("Not administrator mode")
+        os.Exit(1)
     }
 }
 ```
