@@ -2,7 +2,6 @@ package su
 
 import (
 	"fmt"
-	"path/filepath"
 	"unsafe"
 
 	"golang.org/x/sys/windows"
@@ -37,7 +36,7 @@ const (
 )
 
 // ShellExecute calls ShellExecute-API: edit,explore,open and so on.
-func _shellExecute(action, path, param, directory string) (int, error) {
+func shellExecute(action, path, param, directory string) (int, error) {
 	var p _ShellExecuteInfo
 	var pid uintptr
 	var err error
@@ -86,17 +85,4 @@ func _shellExecute(action, path, param, directory string) (int, error) {
 		}
 	}
 	return int(pid), nil
-}
-
-const haveToEvalSymlinkError = windows.Errno(4294967294)
-
-func shellExecute(action, path, param, directory string) (int, error) {
-	pid, err := _shellExecute(action, path, param, directory)
-	if err == haveToEvalSymlinkError {
-		path, err = filepath.EvalSymlinks(path)
-		if err == nil {
-			pid, err = _shellExecute(action, path, param, directory)
-		}
-	}
-	return pid, err
 }
