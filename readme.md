@@ -27,6 +27,9 @@ func main() {
 }
 ```
 
+If you call the executable on the network by su.ShellExecute,
+give the parameter the path filtered by filepath.EvalSymlinks.
+
 [Test](./cmd/isElevated/main.go)
 --------------------------------
 
