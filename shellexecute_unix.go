@@ -6,6 +6,6 @@ import (
 	"errors"
 )
 
-func shellExecute(action, path, param, directory string) (int, error) {
+func (i Param) shellExecute() (int, error) {
 	return 0, errors.New("not supported")
 }

@@ -15,6 +15,39 @@ const (
 	RUNAS = "runas"
 )
 
+const (
+	HIDE            = 0
+	SHOWNORMAL      = 1
+	SHOWMINIMIZED   = 2
+	MAXIMIZE        = 3
+	SHOWNOACTIVATE  = 4
+	SHOW            = 5
+	MINIMIZE        = 6
+	SHOWMINNOACTIVE = 7
+	SHOWNA          = 8
+	RESTORE         = 9
+	SHOWDEFAULT     = 10
+	FORCEMINIMIZE   = 11
+)
+
+type Param struct {
+	Action    string
+	Path      string
+	Param     string
+	Directory string
+	Show      int
+}
+
+func (i Param) ShellExecute() (int, error) {
+	return i.shellExecute()
+}
+
 func ShellExecute(action, path, param, directory string) (int, error) {
-	return shellExecute(action, path, param, directory)
+	return Param{
+		Action:    action,
+		Path:      path,
+		Param:     param,
+		Directory: directory,
+		Show:      SHOWNORMAL,
+	}.shellExecute()
 }
