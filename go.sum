@@ -1,0 +1,4 @@
+github.com/zetamatta/go-windows-netresource v0.0.0-20200329084136-43063a7e4cd2 h1:spfe6lLLnG2gNi053Gvhl14tQ4J56YKvZorH8Ml7NpI=
+github.com/zetamatta/go-windows-netresource v0.0.0-20200329084136-43063a7e4cd2/go.mod h1:zcM57zYz2gjmxUmMZCbzex7+XgSPXm2/Rl2nrTUScMw=
+golang.org/x/sys v0.0.0-20201218084310-7d0127a74742 h1:+CBz4km/0KPU3RGTwARGh/noP3bEwtHcq+0YcBQM2JQ=
+golang.org/x/sys v0.0.0-20201218084310-7d0127a74742/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
