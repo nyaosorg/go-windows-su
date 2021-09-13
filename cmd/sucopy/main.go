@@ -5,8 +5,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/zetamatta/go-windows-netresource"
-	"github.com/zetamatta/go-windows-su"
+	"github.com/nyaosorg/go-windows-netresource"
+	"github.com/nyaosorg/go-windows-su"
 )
 
 func mains(args []string) error {

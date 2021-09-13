@@ -4,7 +4,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/zetamatta/go-windows-su"
+	"github.com/nyaosorg/go-windows-su"
 )
 
 func main() {
