@@ -1,6 +1,4 @@
-github.com/nyaosorg/go-windows-netresource v0.0.0-20200329084136-43063a7e4cd2 h1:dwOvPisAc+n+Nyeo6wbDM31+MUSW+cFJFXM1+J/I9gI=
-github.com/nyaosorg/go-windows-netresource v0.0.0-20200329084136-43063a7e4cd2/go.mod h1:/l55u68Ky+4wQuWDHSkAjKbwryygKU8+vJYaGT+gn58=
-github.com/zetamatta/go-windows-netresource v0.0.0-20200329084136-43063a7e4cd2 h1:spfe6lLLnG2gNi053Gvhl14tQ4J56YKvZorH8Ml7NpI=
-github.com/zetamatta/go-windows-netresource v0.0.0-20200329084136-43063a7e4cd2/go.mod h1:zcM57zYz2gjmxUmMZCbzex7+XgSPXm2/Rl2nrTUScMw=
-golang.org/x/sys v0.0.0-20201218084310-7d0127a74742 h1:+CBz4km/0KPU3RGTwARGh/noP3bEwtHcq+0YcBQM2JQ=
-golang.org/x/sys v0.0.0-20201218084310-7d0127a74742/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
+github.com/nyaosorg/go-windows-netresource v0.1.0 h1:PnqD0fE65HGTr/sVe5EQG8Wlgb7IRUxhy1eQ5YfyLzw=
+github.com/nyaosorg/go-windows-netresource v0.1.0/go.mod h1:bgafgIk9EoJBey6Coc1k6jIiMQgVTyWSsD91qYjB06I=
+golang.org/x/sys v0.0.0-20220520151302-bc2c85ada10a h1:dGzPydgVsqGcTRVwiLJ1jVbufYwmzD3LfVPLKsKg+0k=
+golang.org/x/sys v0.0.0-20220520151302-bc2c85ada10a/go.mod h1:oPkhp1MJrh7nUepCBck5+mAzfO9JrbApNNgaTdGDITg=

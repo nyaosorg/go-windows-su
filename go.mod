@@ -1,9 +1,8 @@
 module github.com/nyaosorg/go-windows-su
 
-go 1.15
+go 1.18
 
 require (
-	github.com/nyaosorg/go-windows-netresource v0.0.0-20200329084136-43063a7e4cd2
-	github.com/zetamatta/go-windows-netresource v0.0.0-20200329084136-43063a7e4cd2 // indirect
-	golang.org/x/sys v0.0.0-20201218084310-7d0127a74742
+	github.com/nyaosorg/go-windows-netresource v0.1.0
+	golang.org/x/sys v0.0.0-20220520151302-bc2c85ada10a
 )
